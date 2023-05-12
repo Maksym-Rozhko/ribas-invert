@@ -1,0 +1,63 @@
+/* stylelint-disable */
+@mixin burger {
+  border: none;
+  background-color: transparent;
+  display: none;
+  height: 35px;
+  width: 35px;
+  align-items: center;
+  justify-content: center;
+  padding-left: 0;
+  cursor: pointer;
+  position: relative;
+  z-index: 111;
+
+  &__line {
+    position: relative;
+    width: 25px;
+    height: 3px;
+    background-color: var(--cs-bg-color);
+    display: inline-block;
+    transition-duration: .4s;
+
+    &::before,
+    &::after {
+      content: "";
+      width: 25px;
+      height: 3px;
+      background-color: var(--cs-bg-color);
+      display: inline-block;
+      position: absolute;
+      left: 0;
+      transition: all .2s;
+    }
+
+    &::before {
+      top: -7px;
+    }
+
+    &::after {
+      top: 7px;
+    }
+  }
+
+  &.burger--active {
+    .burger__line {
+        background-color: transparent;
+
+        &::before,
+        &::after {
+            opacity: 1;
+            top: 50%;
+        }
+
+        &::before {
+            transform: rotate(45deg);
+        }
+
+        &::after {
+            transform: rotate(-45deg);
+        }
+    }
+  }
+}

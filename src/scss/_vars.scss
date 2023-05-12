@@ -1,0 +1,19 @@
+// если вы хотите использовать sass-переменные - удалите root
+// colors
+:root {
+  // base
+  --font-family: "Affect", sans-serif;
+  --content-width: 1420px;
+  --container-offset: 0px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  // colors
+  --white: #fff;
+  --black: #000;
+  --cs-cyan: #51B4BA;
+  --cs-purple: #7A78C9;
+  --cs-pink: #F0609F;
+  --cs-dark: #14141B;
+  --cs-text-main: #3F3F47;
+  --cs-grey: #717177;
+}
