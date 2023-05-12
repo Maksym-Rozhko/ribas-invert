@@ -10,6 +10,18 @@
                 }
             }
         }
+        .banner {
+            padding: 50px 50px 50px 226px;
+
+            img {
+                left: 30px;
+            }
+
+            p {
+                font-size: 16px;
+                max-width: 437px;
+            }
+        }
     }
 }
 
@@ -29,6 +41,15 @@
         }
         &__info {
             flex-wrap: wrap;
+        }
+        .banner {
+            padding: 50px 30px;
+            &::before {
+                right: 290px;
+            }
+            img {
+                top: -100px;
+            }
         }
     }
 }
@@ -54,6 +75,24 @@
             span {
                 font-size: 24px;
                 padding: 18px;
+            }
+        }
+        .banner {
+            flex-direction: column;
+
+            &::before {
+                width: 100%;
+                height: 1px;
+                right: 0;
+                top: 110px;
+            }
+
+            p {
+                text-align: center;
+                margin-bottom: 35px;
+            }
+            button {
+                margin: 0 auto;
             }
         }
     }

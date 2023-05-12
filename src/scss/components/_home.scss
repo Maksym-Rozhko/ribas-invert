@@ -1,6 +1,6 @@
 .main-screen {
     padding-top: 224px;
-    padding-bottom: 106px;
+    padding-bottom: 120px;
     position: relative;
     overflow: hidden;
 
@@ -14,7 +14,7 @@
         width: 100%;
         height: 100%;
         z-index: -1;
-        top: 90px;
+        top: -90px;
     }
 
     &__title {
@@ -150,6 +150,62 @@
 
             &:last-child {
                 background-color: rgba(140, 211, 214, 0.3);
+            }
+        }
+    }
+
+    .banner {
+        @include flex-v-center;
+        background: linear-gradient(90.56deg, #D9F1F2 0.55%, #EAE8F5 98.68%);
+        border-radius: 35px;
+        padding: 50px 50px 50px 326px;
+        position: relative;
+        margin-top: 87px;
+        z-index: 1;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 1px;
+            height: 100%;
+            background-color: var(--white);
+            right: 332px;
+            top: 0;
+            z-index: -1;
+        }
+
+        img {
+            position: absolute;
+            top: -27px;
+            left: 96px;
+        }
+
+        p {
+            margin-top: 0;
+            margin-bottom: 0;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 140%;
+            color: var(--cs-text-main);
+            max-width: 537px;
+        }
+
+        button {
+            @include flex-all-center;
+            gap: 8px;
+            margin-left: auto;
+            background: var(--cs-purple);
+            border-radius: 77px;
+            padding: 20px 25px;
+            color: var(--white);
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 100%;
+            text-align: center;
+            transition: all ease-in-out .4s;
+
+            &:hover {
+                background: var(--cs-cyan);
             }
         }
     }
