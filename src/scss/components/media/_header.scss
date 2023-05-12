@@ -1,5 +1,87 @@
+@include small-desktop {
+    .header {
+        &__container {
+            flex-wrap: wrap;
+            gap: 10px 20px;
+        }
+        .nav {
+            width: 100%;
+            order: 1;
+
+            ul {
+                max-width: fit-content;
+                margin: 0 auto;
+
+                a {
+                    font-size: 14px;
+                    padding: 9px 12px;
+                }
+            }
+        }
+        .phone {
+            font-size: 18px;
+        }
+        .site-link {
+            margin-left: 8px;
+        }
+    }
+}
+
+@include small-tablet {
+    .header {
+        .nav {
+            display: none;
+        }
+        .phone {
+            display: none;
+        }
+        .burger {
+            display: flex;
+        }
+    }
+}
+
 @include mobile {
     .header {
+        padding: 15px 0;
+        .logo img {
+            max-width: 170px;
+        }
+        &__container {
+            flex-wrap: nowrap;
+        }
+        .site-link {
+            display: none;
+        }
+        .burger {
+            padding-right: 0;
+        }
+        .languages {
+            &__active {
+                padding: 8px 12px;
+            }
+        }
+    }
+}
 
+@include small-mobile {
+    .header {
+        .mobile-menu {
+            .nav {
+                ul {
+                    li {
+                        a {
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+            .phone {
+                font-size: 18px;
+            }
+            .site-link {
+                font-size: 18px;
+            }
+        }
     }
 }

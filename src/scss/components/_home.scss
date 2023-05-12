@@ -1,2 +1,156 @@
 .main-screen {
+    padding-top: 224px;
+    padding-bottom: 106px;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        position: absolute;
+        background-image: url('../images/icon/gr-bg.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: auto;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        top: 90px;
+    }
+
+    &__title {
+        position: relative;
+        max-width: 1282px;
+        margin: 0 auto;
+        margin-bottom: 53px;
+
+        .large {
+            font-weight: 400;
+            font-size: 150px;
+            line-height: 100%;
+            text-align: center;
+            letter-spacing: -0.04em;
+            text-transform: uppercase;
+            color: var(--cs-dark);
+            max-width: fit-content;
+            margin: 0 auto;
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                background-image: url('../images/icon/star-cyan.svg');
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+                width: 87px;
+                height: 87px;
+                z-index: -1;
+                top: -29px;
+                right: -48px;
+                animation: star-moving linear 20s infinite;
+            }
+        }
+
+        .text {
+            position: relative;
+        }
+
+        .star-rotate {
+            position: absolute;
+            width: 263px;
+            height: 263px;
+            top: 50%;
+            left: -98px;
+            transform: translateY(-50%);
+            z-index: -1;
+
+            &::before {
+                content: "";
+                position: absolute;
+                background-image: url('../images/icon/star-transparent.svg');
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+                width: 263px;
+                height: 263px;
+                z-index: -1;
+                animation: star-rotating linear 20s infinite;
+            }
+        }
+
+        .star-moving {
+            animation: star-linear-move linear 20s infinite;
+        }
+
+        .title-group {
+            @include flex-all-center;
+            gap: 30px;
+            margin-top: 11px;
+
+            .text {
+                font-weight: 400;
+                font-size: 75px;
+                line-height: 80%;
+                letter-spacing: -0.04em;
+                text-transform: uppercase;
+                color: var(--cs-dark);
+            }
+        }
+
+        .image-wrap {
+            position: relative;
+
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+            }
+
+            &::before {
+                background: rgba(255, 255, 255, 0.9);
+                box-shadow: 0px 14px 15px rgba(122, 120, 201, 0.1);
+                backdrop-filter: blur(20px);
+                border-radius: 30px;
+                width: 146px;
+                height: 38px;
+                right: -18px;
+                bottom: -18px;
+            }
+
+            &::after {
+                background-image: url('../images/icon/stars.svg');
+                background-position: center;
+                background-size: contain;
+                background-repeat: no-repeat;
+                width: 102px;
+                height: 22px;
+                bottom: -10px;
+                right: 0;
+            }
+        }
+    }
+
+    &__info {
+        @include flex-all-center;
+        gap: 16px;
+
+        span {
+            font-weight: 400;
+            font-size: 30px;
+            line-height: 100%;
+            text-align: center;
+            text-transform: uppercase;
+            color: var(--cs-dark);
+            padding: 19px 25px;
+            border-radius: 77px;
+
+            &:first-child {
+                background-color: rgba(122, 120, 201, 0.15);
+            }
+
+            &:last-child {
+                background-color: rgba(140, 211, 214, 0.3);
+            }
+        }
+    }
 }

@@ -3,29 +3,30 @@
   border: none;
   background-color: transparent;
   display: none;
-  height: 35px;
-  width: 35px;
+  height: 40px;
+  width: 45px;
   align-items: center;
   justify-content: center;
   padding-left: 0;
   cursor: pointer;
   position: relative;
   z-index: 111;
+  margin-left: 8px;
 
   &__line {
     position: relative;
-    width: 25px;
+    width: 35px;
     height: 3px;
-    background-color: var(--cs-bg-color);
+    background-color: var(--cs-cyan);
     display: inline-block;
     transition-duration: .4s;
 
     &::before,
     &::after {
       content: "";
-      width: 25px;
+      width: 35px;
       height: 3px;
-      background-color: var(--cs-bg-color);
+      background-color: var(--cs-cyan);
       display: inline-block;
       position: absolute;
       left: 0;
@@ -33,11 +34,11 @@
     }
 
     &::before {
-      top: -7px;
+        top: -10px;
     }
 
     &::after {
-      top: 7px;
+        top: 10px;
     }
   }
 

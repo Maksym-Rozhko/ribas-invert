@@ -1,5 +1,127 @@
+@include small-desktop {
+    .main-screen {
+        &__title {
+            .large {
+                font-size: 100px;
+            }
+            .title-group {
+                .text {
+                    font-size: 55px;
+                }
+            }
+        }
+    }
+}
+
+@include middle-tablet {
+    .main-screen {
+        &__title {
+            .large {
+                font-size: 80px;
+            }
+            .title-group {
+                flex-direction: column;
+                margin-top: 25px;
+                .text {
+                    font-size: 45px;
+                }
+            }
+        }
+        &__info {
+            flex-wrap: wrap;
+        }
+    }
+}
+
+@include tablet {
+    .main-screen {
+        padding-top: 150px;
+
+        &__title {
+            .large {
+                font-size: 60px;
+            }
+            .title-group {
+                position: relative;
+
+                .text {
+                    font-size: 35px;
+                    position: static;
+                }
+            }
+        }
+        &__info {
+            span {
+                font-size: 24px;
+                padding: 18px;
+            }
+        }
+    }
+    @keyframes star-moving {
+        0% {
+            transform: translate(0px, 0px);
+        }
+        15% {
+            transform: translate(-100px, 100px);
+        }
+        30% {
+            transform: translate(100px, 220px);
+        }
+        40% {
+            transform: translate(-200px, 550px);
+        }
+        50% {
+            transform: translate(-500px, 450px);
+        }
+        65% {
+            transform: translate(-300px, 350px);
+        }
+        75% {
+            transform: translate(-500px, -70px);
+        }
+        85% {
+            transform: translate(-200px, 10px);
+        }
+        95% {
+            transform: translate(-100px, 0px);
+        }
+        100% {
+            transform: translate(0px, 0px);
+        }
+    }
+    @keyframes star-linear-move {
+        0% {
+            transform: translateY(-50%) translateX(0px);
+        }
+        50% {
+            transform: translateY(-50%) translateX(600px);
+        }
+        100% {
+            transform: translateY(-50%) translateX(0px);
+        }
+    }
+}
+
 @include mobile {
     .main-screen {
-       
+
+        &__title {
+            margin-bottom: 25px;
+            .large {
+                font-size: 40px;
+            }
+            .title-group {
+                margin-top: 15px;
+                .text {
+                    font-size: 25px;
+                }
+            }
+        }
+        &__info {
+            span {
+                font-size: 18px;
+                padding: 14px;
+            }
+        }
     }
 }
