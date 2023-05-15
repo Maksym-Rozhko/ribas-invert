@@ -1,3 +1,71 @@
+@include big-desktop {
+    .steps {
+        &__container {
+            max-width: 1120px;
+
+            &.step--one {
+                &::after {
+                    top: 85px;
+                }
+
+                .step--one {
+                    &::before {
+                        height: 120px;
+                    }
+                }
+            }
+
+            &.step--two {
+                &::after {
+                    top: 275px;
+                }
+                .step--one {
+                    &::before {
+                        height: 320px;
+                    }
+                }
+            }
+
+            &.step--three {
+                &::after {
+                    top: 465px;
+                }
+                .step--one {
+                    &::before {
+                        height: 530px;
+                    }
+                }
+            }
+
+            &.step--four {
+                &::after {
+                    top: 655px;
+                }
+                .step--one {
+                    &::before {
+                        height: 100vh;
+                    }
+                }
+            }
+        }
+
+        .step {
+            max-width: 500px;
+            padding: 35px 45px 35px 25px;
+
+            .icon {
+                min-width: 120px;
+                height: 120px;
+            }
+
+            p {
+                font-size: 18px;
+                margin-left: 15px;
+            }
+        }
+    }
+}
+
 @include small-desktop {
     .main-screen {
         &__title {
@@ -33,6 +101,69 @@
         p {
             font-size: 24px;
             max-width: 449px;
+        }
+    }
+    .steps {
+        padding-top: 60px;
+
+        &__container {
+            max-width: 720px;
+
+            &.step--one {
+                &::after {
+                    top: 130px;
+                }
+
+                .step--one {
+                    &::before {
+                        height: 200px;
+                    }
+                }
+            }
+
+            &.step--two {
+                &::after {
+                    top: 395px;
+                }
+                .step--one {
+                    &::before {
+                        height: 450px;
+                    }
+                }
+            }
+
+            &.step--three {
+                &::after {
+                    top: 670px;
+                }
+                .step--one {
+                    &::before {
+                        height: 730px;
+                    }
+                }
+            }
+
+            &.step--four {
+                &::after {
+                    top: 955px;
+                }
+                .step--one {
+                    &::before {
+                        height: 100vh;
+                    }
+                }
+            }
+        }
+
+        .step {
+            flex-direction: column;
+            padding: 25px;
+            max-width: 300px;
+
+            p {
+                margin-left: 0;
+                margin-top: 15px;
+            }
         }
     }
 }
@@ -171,6 +302,119 @@
             max-width: inherit;
         }
     }
+    .steps {
+        padding-top: 30px;
+
+        h2 {
+            margin-bottom: 40px;
+        }
+
+
+        &__container {
+            gap: 60px 0;
+            max-width: 800px;
+            padding-right: 60px;
+
+            &::before,
+            &::after  {
+                left: inherit;
+                transform: none;
+                right: 0;
+            }
+
+            &::before {
+                right: 9px;
+            }
+
+            &::after {
+                left: inherit;
+                transform: none;
+                right: 0;
+            }
+
+            &.step--one {
+                &::after {
+                    top: 85px;
+                }
+
+                .step--one {
+                    &::before {
+                        height: 150px;
+                    }
+                }
+            }
+
+            &.step--two {
+                &::after {
+                    top: 335px;
+                }
+                .step--one {
+                    &::before {
+                        height: 400px;
+                    }
+                }
+            }
+
+            &.step--three {
+                &::after {
+                    top: 585px;
+                }
+                .step--one {
+                    &::before {
+                        height: 650px;
+                    }
+                }
+            }
+
+            &.step--four {
+                &::after {
+                    top: 835px;
+                }
+                .step--one {
+                    &::before {
+                        height: 100vh;
+                    }
+                }
+            }
+        }
+
+        .step {
+            flex-direction: row;
+            max-width: inherit;
+            padding: 35px 45px;
+
+            &::after {
+                width: 51px;
+                right: -51px;
+            }
+
+            &:nth-child(odd) {
+                &::after {
+                    right: -51px;
+                }
+            }
+
+            p {
+                margin-top: 0;
+                margin-left: 15px;
+            }
+
+            &:nth-child(even) {
+                margin-left: 0;
+
+                &::after {
+                    left: inherit;
+                    right: -51px;
+                }
+            }
+
+            &.step--one {
+                &::before {
+                    right: -51px;
+                }
+            }
+        }
+    }
 }
 
 @include mobile {
@@ -243,6 +487,138 @@
         }
         100% {
             transform: translateX(0px);
+        }
+    }
+    .steps {
+        &__container {
+            padding-right: 30px;
+
+            &.step--one {
+                &::after {
+                    top: 75px;
+                }
+
+                .step--one {
+                    &::before {
+                        height: 120px;
+                    }
+                }
+            }
+
+            &.step--two {
+                &::after {
+                    top: 305px;
+                }
+                .step--one {
+                    &::before {
+                        height: 370px;
+                    }
+                }
+            }
+
+            &.step--three {
+                &::after {
+                    top: 535px;
+                }
+                .step--one {
+                    &::before {
+                        height: 600px;
+                    }
+                }
+            }
+
+            &.step--four {
+                &::after {
+                    top: 765px;
+                }
+                .step--one {
+                    &::before {
+                        height: 100vh;
+                    }
+                }
+            }
+        }
+        .step {
+            padding: 45px 15px;
+
+            &::after {
+                width: 21px;
+                right: -21px;
+            }
+
+            &:nth-child(odd) {
+                &::after {
+                    right: -21px;
+                }
+            }
+
+            &:nth-child(even) {
+                &::after {
+                    right: -21px;
+                }
+            }
+
+            &.step--one {
+                &::before {
+                    right: -21px;
+                }
+            }
+
+            .icon {
+                min-width: 80px;
+                height: 80px;
+
+                img {
+                    max-width: 40px;
+                }
+            }
+
+            p {
+                font-size: 16px;
+                max-width: 320px;
+            }
+
+            &-count {
+                width: 30px;
+                height: 30px;
+                top: 10px;
+                right: 10px;
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+@media (max-width: 420px) {
+    .steps {
+        &__container {
+            padding-right: 0;
+            max-width: inherit;
+            gap: 30px;
+
+            &::before,
+            &::after {
+                content: none;
+            }
+        }
+
+        .step {
+            &::before {
+                content: none;
+            }
+
+            &:nth-child(even),
+            &:nth-child(odd) {
+                &::after {
+                    border-right: 4px dashed var(--cs-purple);
+                    height: 30px;
+                    right: 50%;
+                    transform: translateX(-50%);
+                    bottom: -30px;
+                    top: inherit;
+                    width: inherit;
+                }
+            }
         }
     }
 }
