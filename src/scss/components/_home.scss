@@ -1,6 +1,6 @@
 .main-screen {
     padding-top: 224px;
-    padding-bottom: 120px;
+    padding-bottom: 60px;
     position: relative;
     overflow: hidden;
 
@@ -206,6 +206,128 @@
 
             &:hover {
                 background: var(--cs-cyan);
+            }
+        }
+    }
+}
+
+.about {
+    padding-top: 60px;
+    padding-bottom: 75px;
+
+    &__container {
+        padding: 132px 82px;
+        background: #7A78C9 url('../images/home/about-bg.png') no-repeat center/cover;
+        border-radius: 35px;
+        margin-bottom: 16px;
+    }
+
+    .label {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 100%;
+        text-transform: uppercase;
+        color: var(--white);
+    }
+
+    h2 {
+        font-weight: 400;
+        font-size: 75px;
+        line-height: 80%;
+        letter-spacing: -0.04em;
+        text-transform: uppercase;
+        color: var(--white);
+        margin-top: 60px;
+        margin-bottom: 30px;
+        max-width: 500px;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            background-image: url('../images/icon/about-star.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            left: -24px;
+            top: -24px;
+            animation: star-linear-move2 linear 20s infinite;
+        }
+    }
+
+    p {
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 100%;
+        text-transform: uppercase;
+        color: var(--white);
+        margin-top: 0;
+        margin-bottom: 0;
+        max-width: 450px;
+    }
+
+    &__group {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+
+        .text-block {
+            @include flex-v-center;
+            font-family: 'Manrope', sans-serif;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 140%;
+            color: var(--cs-text-main);
+            padding-left: 132px;
+            padding-right: 40px;
+            padding-top: 42px;
+            padding-bottom: 42px;
+            border-radius: 25px;
+            position: relative;
+
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            &::before {
+                width: 35px;
+                height: 35px;
+                left: 40px;
+            }
+
+            &::after {
+                width: 1px;
+                height: 75px;
+                background-color: var(--white);
+                left: 107px;
+            }
+
+            &:first-child {
+                background-color: rgba(140, 211, 214, 0.2);
+
+                &::before {
+                    background-image: url('../images/icon/wallet.svg');
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: contain;
+                }
+            }
+
+            &:last-child {
+                background-color: rgba(122, 120, 201, 0.15);
+
+                &::before {
+                    background-image: url('../images/icon/businessman.svg');
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: contain;
+                }
             }
         }
     }

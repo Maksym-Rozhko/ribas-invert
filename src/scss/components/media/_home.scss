@@ -23,6 +23,18 @@
             }
         }
     }
+    .about {
+        &__container {
+            padding: 100px 40px;
+        }
+        h2 {
+            font-size: 50px;
+        }
+        p {
+            font-size: 24px;
+            max-width: 449px;
+        }
+    }
 }
 
 @include middle-tablet {
@@ -56,8 +68,6 @@
 
 @include tablet {
     .main-screen {
-        padding-top: 150px;
-
         &__title {
             .large {
                 font-size: 60px;
@@ -139,11 +149,32 @@
             transform: translateY(-50%) translateX(0px);
         }
     }
+    .about {
+        &__group {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+@include small-tablet {
+    .main-screen {
+        padding-bottom: 30px;
+    }
+    .about {
+        padding-top: 30px;
+
+        &__container {
+            background: #7A78C9;
+        }
+
+        p {
+            max-width: inherit;
+        }
+    }
 }
 
 @include mobile {
     .main-screen {
-
         &__title {
             margin-bottom: 25px;
             .large {
@@ -161,6 +192,57 @@
                 font-size: 18px;
                 padding: 14px;
             }
+        }
+    }
+    .about {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        text-align: center;
+
+        &__container {
+            padding: 60px 20px;
+            margin-bottom: 8px;
+        }
+
+        h2 {
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 40px;
+            max-width: inherit;
+        }
+        p {
+            max-width: inherit;
+            font-size: 18px;
+        }
+        &__group {
+            gap: 8px;
+
+            .text-block {
+                font-size: 16px;
+                padding-top: 22px;
+                padding-bottom: 22px;
+                padding-right: 22px;
+                padding-left: 90px;
+
+                &::before {
+                    left: 22px;
+                }
+
+                &::after {
+                    left: 75px;
+                }
+            }
+        }
+    }
+    @keyframes star-linear-move2 {
+        0% {
+            transform: translateX(0px);
+        }
+        50% {
+            transform: translateX(300px);
+        }
+        100% {
+            transform: translateX(0px);
         }
     }
 }

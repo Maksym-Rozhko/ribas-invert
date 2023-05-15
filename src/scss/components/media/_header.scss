@@ -24,6 +24,9 @@
         .site-link {
             margin-left: 8px;
         }
+        &.active-scroll {
+            backdrop-filter: blur(50px);
+        }
     }
 }
 

@@ -160,6 +160,18 @@
 	}
 }
 
+@keyframes star-linear-move2 {
+    0% {
+        transform: translateX(0px);
+    }
+	50% {
+        transform: translateX(450px);
+	}
+	100% {
+        transform: translateX(0px);
+	}
+}
+
 // /* The typing effect */
 // @keyframes typing {
 // 	from { width: 0; white-space: nowrap;}
