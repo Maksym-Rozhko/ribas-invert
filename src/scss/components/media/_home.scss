@@ -166,6 +166,17 @@
             }
         }
     }
+    .request-banner {
+        .banner {
+            &__container {
+                padding: 80px 40px;
+            }
+            p {
+                max-width: 452px;
+            }
+        }
+    }
+
 }
 
 @include middle-tablet {
@@ -313,6 +324,7 @@
         &__container {
             gap: 60px 0;
             max-width: 800px;
+            padding-bottom: 80px;
             padding-right: 60px;
 
             &::before,
@@ -412,6 +424,31 @@
                 &::before {
                     right: -51px;
                 }
+            }
+        }
+    }
+    .request-banner {
+        .banner {
+            padding-top: 0;
+
+            &__container {
+                img {
+                    top: 0;
+                    height: 100%;
+                    opacity: .5;
+                }
+            }
+            p,
+            h2 {
+                position: relative;
+                z-index: 1;
+            }
+
+            h2 {
+                font-size: 50px;
+            }
+            p {
+                font-size: 16px;
             }
         }
     }
@@ -584,6 +621,19 @@
                 top: 10px;
                 right: 10px;
                 font-size: 12px;
+            }
+        }
+    }
+    .request-banner {
+        .banner {
+            &__container {
+                padding: 40px 20px;
+            }
+            h2 {
+                font-size: 35px;
+            }
+            p {
+                max-width: inherit;
             }
         }
     }
