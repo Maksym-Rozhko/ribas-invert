@@ -741,3 +741,121 @@
         }
     }
 }
+
+.amount {
+    padding-bottom: 190px;
+
+    &__container {
+        background: linear-gradient(90.56deg, #D9F1F2 0.55%, #EAE8F5 98.68%);
+        border-radius: 35px;
+        padding: 95px;
+        text-align: center;
+        position: relative;
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+        }
+
+        &::after {
+            background-image: url('../images/icon/warm-2.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            width: 170px;
+            height: 228px;
+            left: 183px;
+            bottom: -129px;
+        }
+
+        &::before {
+            background-image: url('../images/icon/amount-star.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: auto;
+            width: 271px;
+            height: 271px;
+            left: 161px;
+            bottom: -91px;
+            animation: star-rotating linear 20s infinite;
+        }
+
+        &.animated {
+            .attention {
+                opacity: 1;
+
+                &::after {
+                    height: 95px;
+                }
+            }
+        }
+    }
+
+    h2 {
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 100%;
+        text-transform: uppercase;
+        color: var(--cs-text-main);
+        margin-top: 0;
+        margin-bottom: 30px;
+    }
+
+    .total {
+        font-family: 'Manrope', sans-serif;
+        font-weight: 700;
+        font-size: 90px;
+        line-height: 100%;
+        letter-spacing: -0.04em;
+        text-transform: uppercase;
+        color: var(--cs-text-main);
+    }
+
+    .attention {
+        position: absolute;
+        right: 101px;
+        bottom: -129px;
+        border-radius: 35px;
+        background-color: var(--cs-purple);
+        padding: 103px 39px 45px 39px;
+        max-width: 304px;
+        text-align: left;
+        font-family: 'Manrope', sans-serif;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 120%;
+        color: var(--white);
+        transition: all ease-in-out .6s;
+        opacity: 0;
+
+        &::after,
+        &::before {
+            content: "";
+            position: absolute;
+            transition: all ease-in-out .4s;
+        }
+
+        &::before {
+            width: 46px;
+            height: 46px;
+            background-image: url('../images/icon/fire.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            top: 45px;
+            left: 40px;
+        }
+
+        &::after {
+            width: 221px;
+            height: 0;
+            background-image: url('../images/icon/fire-arrow.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            left: -222px;
+            top: 93px;
+        }
+    }
+}

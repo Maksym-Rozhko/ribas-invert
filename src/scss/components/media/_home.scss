@@ -198,6 +198,28 @@
             }
         }
     }
+    .amount {
+        &__container {
+            padding-top: 75px;
+            padding-bottom: 150px;
+
+            &::before {
+                left: 61px;
+            }
+            &::after {
+                left: 83px;
+            }
+        }
+        .attention {
+            right: 51px;
+
+            &::after {
+                transform: rotate(15deg);
+                left: -200px;
+                top: 43px;
+            }
+        }
+    }
 }
 
 @include middle-tablet {
@@ -315,6 +337,30 @@
     .about {
         &__group {
             grid-template-columns: 1fr;
+        }
+    }
+    .amount {
+        &__container {
+            padding: 75px 50px 150px 50px;
+
+            h2 {
+                font-size: 24px;
+            }
+
+            .total {
+                font-size: 70px;
+            }
+
+            &::before {
+                left: 0;
+            }
+            &::after {
+                left: 0;
+            }
+        }
+        .attention {
+            font-size: 16px;
+            right: 16px;
         }
     }
 }
@@ -488,6 +534,41 @@
         &__group {
             grid-template-columns: 1fr;
             max-width: 340px;
+        }
+    }
+    .amount {
+        &__container {
+            &::after {
+                width: 120px;
+                height: 178px;
+                bottom: -79px;
+            }
+            &::before {
+                background-size: contain;
+                width: 171px;
+                height: 171px;
+                bottom: -41px;
+            }
+        }
+        .total {
+            font-size: 60px;
+        }
+        .attention {
+            padding: 70px 20px 25px 20px;
+            max-width: 250px;
+
+            &::before {
+                width: 36px;
+                height: 36px;
+                top: 25px;
+                left: 20px;
+            }
+
+            &::after {
+                width: 140px;
+                left: -140px;
+                top: -40px;
+            }
         }
     }
 }
@@ -678,6 +759,34 @@
     .results {
         h2 {
             font-size: 35px;
+        }
+    }
+    .amount {
+        padding-bottom: 100px;
+
+        h2 {
+            font-size: 20px;
+        }
+
+        .total {
+            font-size: 50px;
+        }
+
+        &__container {
+            padding: 50px 25px 100px 25px;
+        }
+        .attention {
+            position: relative;
+            bottom: inherit;
+            right: inherit;
+            margin-top: 25px;
+            margin-left: auto;
+            margin-right: auto;
+
+            &::after {
+                left: -100px;
+                transform: rotate(57deg);
+            }
         }
     }
 }

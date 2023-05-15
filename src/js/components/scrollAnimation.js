@@ -15,7 +15,7 @@ const scrollAnimation = endElem => {
     } catch (error) {}
 };
 
-// scrollAnimation('.elem .elem');
+scrollAnimation('.amount .end-elem');
 
 const scrollStepsAnimation = endElem => {
     const stepsContainer = document.querySelector('.steps .steps__container');
