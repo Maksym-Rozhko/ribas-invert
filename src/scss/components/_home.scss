@@ -859,3 +859,89 @@
         }
     }
 }
+
+.prospects {
+    padding-top: 100px;
+    padding-bottom: 50px;
+
+    &__container {
+        @include flex-v-center;
+        gap: 168px;
+    }
+
+    &__info {
+        max-width: 550px;
+
+        h3 {
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 100%;
+            text-transform: uppercase;
+            color: var(--cs-text-main);
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        h2 {
+            font-weight: 400;
+            font-size: 75px;
+            line-height: 80%;
+            letter-spacing: -0.04em;
+            text-transform: uppercase;
+            color: var(--cs-dark);
+            margin-top: 46px;
+            margin-bottom: 50px;
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 70px;
+                height: 70px;
+                background-image: url('../images/icon/prospects-star.svg');
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+                left: -24px;
+                top: -24px;
+                animation: star-linear-move2 linear 20s infinite;
+            }
+        }
+
+        ul {
+            li {
+                &:not(:last-child) {
+                    padding-bottom: 12px;
+                    margin-bottom: 28px;
+                    border-bottom: 1px solid #EBEBF7;
+                }
+
+                h4 {
+                    font-weight: 400;
+                    font-size: 30px;
+                    line-height: 100%;
+                    text-transform: uppercase;
+                    color: var(--cs-text-main);
+                    margin-top: 0;
+                    margin-bottom: 8px;
+                }
+
+                p {
+                    font-family: 'Manrope', sans-serif;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 140%;
+                    color: var(--cs-dark);
+                    margin-top: 0;
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    &__images {
+        img {
+            border-radius: 35px;
+        }
+    }
+}
