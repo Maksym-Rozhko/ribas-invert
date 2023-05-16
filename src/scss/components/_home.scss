@@ -1440,3 +1440,92 @@
         }
     }
 }
+
+.experts {
+    padding-top: 160px;
+    padding-bottom: 80px;
+
+    .label {
+        display: block;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 100%;
+        text-transform: uppercase;
+        color: var(--cs-text-main);
+        margin-bottom: 30px;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        gap: 114px;
+    }
+
+    &__text {
+        max-width: 606px;
+        h2 {
+            font-weight: 400;
+            font-size: 75px;
+            line-height: 80%;
+            letter-spacing: -0.04em;
+            text-transform: uppercase;
+            color: var(--cs-dark);
+            margin-top: 0;
+            margin-bottom: 55px;
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 70px;
+                height: 70px;
+                background-image: url('../images/icon/prospects-star.svg');
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+                left: -24px;
+                top: -24px;
+                z-index: -1;
+                animation: star-linear-move2 linear 20s infinite;
+            }
+        }
+
+        p {
+            font-weight: 400;
+            font-size: 30px;
+            line-height: 100%;
+            text-transform: uppercase;
+            color: var(--cs-text-main);
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    }
+
+    &__blocks {
+        .block {
+            border-radius: 35px;
+
+            &:first-child {
+                padding: 45px 20px 45px 50px;
+                margin-bottom: 16px;
+                background: rgba(122, 120, 201, 0.15);
+            }
+
+            &:last-child {
+                padding: 30px 20px 38px 50px;
+                background: rgba(140, 211, 214, 0.15);
+            }
+
+            p {
+                font-family: 'Manrope';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 140%;
+                color: var(--cs-text-main);
+                margin-top: 20px;
+                margin-bottom: 0;
+            }
+        }
+    }
+}

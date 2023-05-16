@@ -95,6 +95,24 @@
             margin-bottom: 30px;
         }
     }
+    .experts {
+        padding-top: 120px;
+
+        &__container {
+            align-items: center;
+            gap: 50px;
+        }
+
+        &__text {
+            h2 {
+                font-size: 60px;
+                margin-bottom: 40px;
+            }
+            p {
+                font-size: 24px;
+            }
+        }
+    }
 }
 
 @include small-desktop {
@@ -335,6 +353,29 @@
             }
         }
     }
+    .experts {
+        padding-top: 100px;
+
+        &__text {
+            max-width: 486px;
+
+            h2 {
+                font-size: 50px;
+            }
+        }
+
+        &__blocks {
+            .block {
+                &:first-child {
+                    padding: 45px 20px 45px 20px;
+                }
+
+                &:last-child {
+                    padding: 30px 20px 38px 20px;
+                }
+            }
+        }
+    }
 }
 
 @include middle-tablet {
@@ -517,6 +558,14 @@
                     border-radius: 35px 35px 0 0;
                 }
             }
+        }
+    }
+    .experts {
+        &__text {
+            max-width: 350px;
+        }
+        &__container {
+            gap: 25px;
         }
     }
 }
@@ -803,6 +852,32 @@
         }
         h2 {
             font-size: 40px;
+        }
+    }
+    .experts {
+        padding-top: 60px;
+        padding-bottom: 60px;
+
+        .label {
+            font-size: 18px;
+        }
+
+        &__container {
+            flex-direction: column;
+        }
+
+        &__text {
+            max-width: inherit;
+            h2 {
+                font-size: 40px;
+
+                br {
+                    display: none;
+                }
+            }
+            p {
+                font-size: 20px;
+            }
         }
     }
 }
@@ -1094,6 +1169,7 @@
         }
     }
     .projects {
+        margin: 0 4px;
         h2 {
             font-size: 30px;
         }
@@ -1120,6 +1196,35 @@
                             font-size: 16px;
                         }
                     }
+                }
+            }
+        }
+    }
+    .experts {
+        padding-top: 30px;
+        padding-bottom: 30px;
+
+        &__text {
+            h2 {
+                font-size: 30px;
+            }
+            p {
+                font-size: 18px;
+            }
+        }
+
+        &__blocks {
+            .block {
+                &:first-child {
+                    padding: 25px 20px;
+                }
+
+                &:last-child {
+                    padding: 25px 20px;
+                }
+
+                p {
+                    margin-top: 10px;
                 }
             }
         }
