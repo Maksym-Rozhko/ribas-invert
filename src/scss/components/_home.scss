@@ -429,7 +429,7 @@
             }
             .step--one {
                 &::before {
-                    height: 100vh;
+                    height: 1200px;
                 }
             }
         }
@@ -619,6 +619,29 @@
 
             &:hover {
                 background: var(--cs-purple);
+            }
+        }
+    }
+
+    &-purple {
+        .banner {
+            &__container {
+                background: #7A78C9;
+                background-image: url('../images/home/request-banner-img-2.png');
+                background-repeat: no-repeat;
+                background-position: center bottom;
+                background-size: cover;
+            }
+
+            h2,
+            p {
+                color: var(--white);
+            }
+
+            button {
+                &:hover {
+                    background: var(--cs-pink);
+                }
             }
         }
     }
