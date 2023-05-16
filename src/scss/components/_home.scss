@@ -1584,3 +1584,160 @@
         }
     }
 }
+
+.carefree {
+    padding-top: 60px;
+    padding-bottom: 120px;
+
+    .label {
+        display: block;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 100%;
+        text-align: center;
+        text-transform: uppercase;
+        color: var(--cs-text-main);
+    }
+
+    &__container {
+        position: relative;
+    }
+
+    h2 {
+        font-weight: 400;
+        font-size: 75px;
+        line-height: 80%;
+        text-align: center;
+        letter-spacing: -0.04em;
+        text-transform: uppercase;
+        color: var(--cs-dark);
+        margin-top: 46px;
+        margin-bottom: 85px;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 883px;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            background-image: url('../images/icon/prospects-star.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            left: -24px;
+            top: -24px;
+            z-index: -1;
+            animation: star-linear-move2 linear 20s infinite;
+        }
+    }
+
+    &__images {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 42px;
+        background-image: url('../images/icon/radius-dashed.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: auto;
+
+        li {
+            position: relative;
+            max-width: 260px;
+            padding: 2px;
+            border-radius: 35px;
+
+            .block {
+                @include flex-v-center;
+                flex-direction: column;
+                padding: 55px 38px;
+                border-radius: 35px;
+                gap: 25px;
+                height: 100%;
+                backdrop-filter: blur(20px);
+            }
+
+            &:nth-child(even) {
+                background: linear-gradient(90.56deg, #D9F1F2 0.55%, #EAE8F5 98.68%);
+
+                .count {
+                    color: var(--white);
+                }
+            }
+
+            &:nth-child(odd) {
+                background: linear-gradient(0deg, #D9F1F2 100%, #EAE8F5 100%);
+
+                .block {
+                    background: var(--white)
+                }
+
+                .count {
+                    background: linear-gradient(90.56deg, #B3E1E3 0.55%, #C9C4E6 98.68%);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    background-clip: text;
+                    text-fill-color: transparent;
+                }
+            }
+
+            &:first-child,
+            &:last-child {
+                order: -2;
+            }
+            &:nth-child(2),
+            &:nth-child(4) {
+                order: -1;
+            }
+
+            &:nth-child(4),
+            &:last-child {
+                margin-left: auto;
+            }
+
+            &:nth-child(2) {
+                margin-left: 213px;
+            }
+
+            &:nth-child(4) {
+                margin-right: 213px;
+            }
+
+            &:nth-child(3) {
+                margin-left: auto;
+                margin-right: -150px;
+                margin-top: -160px;
+            }
+
+            .count {
+                font-family: 'Manrope', sans-serif;
+                font-weight: 700;
+                font-size: 75px;
+                line-height: 80%;
+                text-align: center;
+                letter-spacing: -0.04em;
+                text-transform: uppercase;
+            }
+
+            p {
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 100%;
+                text-align: center;
+                text-transform: uppercase;
+                color: var(--cs-text-main);
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+        }
+    }
+}

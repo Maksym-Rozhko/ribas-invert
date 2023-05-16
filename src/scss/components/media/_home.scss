@@ -113,6 +113,19 @@
             }
         }
     }
+    .carefree {
+        padding-bottom: 60px;
+
+        h2 {
+            font-size: 60px;
+        }
+
+        &__images {
+            img {
+                max-width: 450px;
+            }
+        }
+    }
 }
 
 @include small-desktop {
@@ -385,6 +398,34 @@
             }
         }
     }
+    .carefree {
+        h2 {
+            font-size: 50px;
+        }
+
+        &__images {
+            img {
+                max-width: 350px;
+            }
+        }
+
+        &__list {
+            gap: 22px;
+            background-position: center top 50px;
+
+            li {
+                max-width: 230px;
+
+                &:nth-child(3) {
+                    margin-top: 0;
+                }
+
+                .block {
+                    padding: 35px 28px;
+                }
+            }
+        }
+    }
 }
 
 @include middle-tablet {
@@ -575,6 +616,61 @@
         }
         &__container {
             gap: 25px;
+        }
+    }
+    .carefree {
+        h2 {
+            margin-bottom: 30px;
+        }
+        &__images {
+            transform: none;
+            position: static;
+            margin: 0 auto;
+            max-width: 500px;
+
+            img {
+                max-width: inherit;
+            }
+        }
+        &__list {
+            background: none;
+            display: flex;
+            flex-direction: column;
+            max-width: 260px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 25px;
+
+            li {
+                max-width: 260px;
+                position: relative;
+
+                .block {
+                    padding: 57px 35px;
+                }
+
+                &:first-child,
+                &:nth-child(2),
+                &:nth-child(3),
+                &:nth-child(4),
+                &:last-child {
+                    margin-left: 0;
+                    margin-right: 0;
+                    order: inherit;
+                }
+
+                &:not(:last-child) {
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        height: 24px;
+                        border-right: 2px dashed var(--cs-cyan);
+                        bottom: -24px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+                }
+            }
         }
     }
 }
@@ -900,6 +996,11 @@
                     font-size: 18px;
                 }
             }
+        }
+    }
+    .carefree {
+        h2 {
+            font-size: 40px;
         }
     }
 }
@@ -1264,6 +1365,20 @@
                     padding: 15px 10px;
                     font-size: 16px;
                 }
+            }
+        }
+    }
+    .carefree {
+        padding-top: 30px;
+
+        h2 {
+            margin-top: 20px;
+            font-size: 30px;
+        }
+        &__images {
+            max-width: 350px;
+            img {
+                width: 100%;
             }
         }
     }
