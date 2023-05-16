@@ -86,6 +86,15 @@
             font-size: 60px;
         }
     }
+    .projects {
+        padding: 100px 0;
+
+        h2 {
+            font-size: 60px;
+            margin-top: 25px;
+            margin-bottom: 30px;
+        }
+    }
 }
 
 @include small-desktop {
@@ -309,6 +318,23 @@
             }
         }
     }
+    .projects {
+        padding: 60px 0;
+
+        h2 {
+            font-size: 50px;
+        }
+
+        .project {
+            &__info {
+                padding: 20px;
+
+                .project__group {
+                    gap: 20px 55px;
+                }
+            }
+        }
+    }
 }
 
 @include middle-tablet {
@@ -476,6 +502,21 @@
         &__list {
             gap: 60px 30px;
             padding-bottom: 470px;
+        }
+    }
+    .projects {
+        .project {
+            flex-direction: column;
+
+            &__image {
+                max-width: inherit;
+                width: 100%;
+                max-height: 450px;
+
+                img {
+                    border-radius: 35px 35px 0 0;
+                }
+            }
         }
     }
 }
@@ -754,6 +795,14 @@
                 width: 100%;
                 margin: 0 auto;
             }
+        }
+    }
+    .projects {
+        h3 {
+            font-size: 18px;
+        }
+        h2 {
+            font-size: 40px;
         }
     }
 }
@@ -1040,6 +1089,37 @@
                 }
                 h3 {
                     font-size: 22px;
+                }
+            }
+        }
+    }
+    .projects {
+        h2 {
+            font-size: 30px;
+        }
+
+        .project {
+            &__name {
+                font-size: 24px;
+                margin-bottom: 25px;
+            }
+            &__info {
+                .project__group {
+                    gap: 20px;
+
+                    &::before {
+                        content: none;
+                    }
+                }
+                .info {
+                    span {
+                        &:first-child {
+                            font-size: 14px;
+                        }
+                        &:last-child {
+                            font-size: 16px;
+                        }
+                    }
                 }
             }
         }
