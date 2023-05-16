@@ -376,6 +376,15 @@
             }
         }
     }
+    .gallery {
+        &__slider {
+            .image {
+                .descript {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
 }
 
 @include middle-tablet {
@@ -880,6 +889,19 @@
             }
         }
     }
+    .gallery {
+        &__slider {
+            .image {
+                img {
+                    min-height: 400px;
+                }
+                .descript {
+                    padding: 15px;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
 }
 
 @include mobile {
@@ -1225,6 +1247,22 @@
 
                 p {
                     margin-top: 10px;
+                }
+            }
+        }
+    }
+    .gallery {
+        padding-top: 30px;
+        padding-bottom: 30px;
+
+        &__slider {
+            .image {
+                img {
+                    min-height: 300px;
+                }
+                .descript {
+                    padding: 15px 10px;
+                    font-size: 16px;
                 }
             }
         }

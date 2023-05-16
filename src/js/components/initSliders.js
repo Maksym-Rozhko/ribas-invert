@@ -1,20 +1,11 @@
 import Swiper, { Navigation, Pagination } from 'swiper';
 Swiper.use([Navigation, Pagination]);
 
-new Swiper('.swiper.point-slider', {
+const gallerySlider = new Swiper('.swiper.gallery__slider', {
 	slidesPerView: 1,
-	spaceBetween: 20,
+	spaceBetween: 8,
+    centeredSlides: true,
+    loop: true,
     speed: 1000,
-
-	breakpoints: {
-		320: {
-			slidesPerView: 1,
-            spaceBetween: 10,
-		},
-        768: {
-			slidesPerView: 2,
-            spaceBetween: 20,
-        }
-	},
 });
 
