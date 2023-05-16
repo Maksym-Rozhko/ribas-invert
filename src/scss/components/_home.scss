@@ -968,3 +968,135 @@
         }
     }
 }
+
+.why {
+    padding-top: 112px;
+    margin-bottom: 60px;
+
+    .label {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 100%;
+        text-transform: uppercase;
+        color: var(--cs-text-main);
+    }
+
+    &__container {
+        display: flex;
+        gap: 168px;
+        padding-bottom: 120px;
+        margin-top: 30px;
+        border-bottom: 1px solid #EBEBF7;
+    }
+
+    h2 {
+        font-weight: 400;
+        font-size: 75px;
+        line-height: 80%;
+        letter-spacing: -0.04em;
+        text-transform: uppercase;
+        color: var(--cs-dark);
+        margin-top: 0;
+        margin-bottom: 0;
+        max-width: 667px;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            background-image: url('../images/icon/prospects-star.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            left: -24px;
+            top: -24px;
+            animation: star-linear-move2 linear 20s infinite;
+        }
+
+        span {
+            color: var(--cs-purple);
+        }
+    }
+
+    &__list {
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 205px;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
+            bottom: 0;
+        }
+
+        li {
+            display: flex;
+            gap: 22px;
+
+            &:not(:last-child) {
+                margin-bottom: 49px;
+            }
+
+            .count {
+                @include flex-all-center;
+                width: 50px;
+                min-width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                background: linear-gradient(0deg, #D9F1F2 100%, #EAE8F5 100%);
+                position: relative;
+
+                span {
+                    @include flex-all-center;
+                    position: absolute;
+                    font-family: 'Manrope', sans-serif;
+                    font-weight: 700;
+                    font-size: 14px;
+                    line-height: 140%;
+                    color: var(--cs-purple);
+                    border-radius: 50%;
+                    width: 45px;
+                    height: 45px;
+                    background-color: var(--white);
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+
+            p {
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 100%;
+                text-transform: uppercase;
+                color: var(--cs-text-main);
+                margin-top: 0;
+                margin-bottom: 6px;
+            }
+
+            h3 {
+                font-weight: 400;
+                font-size: 40px;
+                line-height: 100%;
+                text-transform: uppercase;
+                color: var(--cs-text-main);
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+
+            span {
+                display: block;
+                font-family: 'Manrope', sans-serif;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 140%;
+                color: var(--cs-text-main);
+                max-width: 353px;
+            }
+        }
+    }
+}

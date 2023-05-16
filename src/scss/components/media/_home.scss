@@ -69,6 +69,18 @@
             gap: 75px;
         }
     }
+    .why {
+        &__container {
+            gap: 60px;
+        }
+        h2 {
+            font-size: 60px;
+        }
+        h2,
+        &__list {
+            width: 100%;
+        }
+    }
 }
 
 @include small-desktop {
@@ -245,6 +257,28 @@
                     h4 {
                         font-size: 24px;
                     }
+                }
+            }
+        }
+    }
+    .why {
+        padding-top: 60px;
+
+        &__container {
+            padding-bottom: 60px;
+        }
+
+        h2 {
+            font-size: 50px;
+        }
+
+        &__list {
+            li {
+                h3 {
+                    font-size: 30px;
+                }
+                p {
+                    font-size: 18px;
                 }
             }
         }
@@ -641,6 +675,28 @@
             }
         }
     }
+    .why {
+        padding-top: 30px;
+        margin-bottom: 30px;
+
+        &__container {
+            flex-direction: column;
+            gap: 30px;
+            padding-bottom: 30px;
+        }
+
+        h2 {
+            font-size: 40px;
+        }
+
+        &__list {
+            li {
+                &:not(:last-child) {
+                    margin-bottom: 25px;
+                }
+            }
+        }
+    }
 }
 
 @include mobile {
@@ -859,26 +915,58 @@
             }
         }
     }
-        .prospects {
-            &__info {
-                h3 {
-                    font-size: 18px;
-                }
-                h2 {
-                    font-size: 30px;
-                }
-                ul {
-                    li {
-                        &:not(:last-child) {
-                            margin-bottom: 12px;
-                        }
-                        h4 {
-                            font-size: 18px;
-                        }
+    .prospects {
+        &__info {
+            h3 {
+                font-size: 18px;
+            }
+            h2 {
+                font-size: 30px;
+            }
+            ul {
+                li {
+                    &:not(:last-child) {
+                        margin-bottom: 12px;
+                    }
+                    h4 {
+                        font-size: 18px;
                     }
                 }
             }
         }
+    }
+    .why {
+        .label {
+            font-size: 18px;
+        }
+        h2 {
+            font-size: 30px;
+        }
+        &__container {
+            margin-top: 20px;
+        }
+        &__list {
+            li {
+                gap: 10px;
+
+                &:not(:last-child) {
+                    margin-bottom: 15px;
+                }
+
+                p {
+                    font-size: 16px;
+                }
+
+                h3 {
+                    font-size: 20px;
+                }
+
+                span {
+
+                }
+            }
+        }
+    }
 }
 
 @media (max-width: 420px) {
