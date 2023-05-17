@@ -18,6 +18,9 @@
     }
 
     .nav {
+        margin-left: auto;
+        margin-right: 170px;
+
         ul {
             @include flex-all-sb;
             gap: 8px;

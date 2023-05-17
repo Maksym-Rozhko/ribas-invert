@@ -1741,3 +1741,122 @@
         }
     }
 }
+
+.documents {
+    padding-top: 52px;
+    padding-bottom: 100px;
+
+    h2 {
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 100%;
+        text-transform: uppercase;
+        text-align: center;
+        color: var(--cs-dark);
+        margin-top: 0;
+        margin-bottom: 50px;
+    }
+
+    &__container {
+        @include flex-all-center;
+        gap: 16px;
+
+        a {
+            @include flex-v-center;
+            max-width: 250px;
+            width: 100%;
+            gap: 16px;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 100%;
+            text-transform: uppercase;
+            color: var(--cs-text-main);
+            padding: 19px 29px;
+            border-radius: 83px;
+            position: relative;
+            transition: all ease-in-out .4s;
+
+            .doc {
+                transition: all ease-in-out .4s;
+            }
+
+            .text {
+                transition: all ease-in-out .4s;
+            }
+
+            .download {
+                @include flex-all-center;
+                width: 55px;
+                height: 55px;
+                border-radius: 50%;
+                position: absolute;
+                right: 5px;
+                top: 50%;
+                transform: translateY(-50%);
+                z-index: -1;
+                transition: all ease-in-out .4s;
+
+                svg {
+                    transition: all ease-in-out .4s;
+                }
+            }
+
+            &:hover {
+                .doc {
+                    color: var(--white);
+                }
+                .text {
+                    color: var(--white);
+                }
+                .download {
+                    border-radius: 83px;
+                    width: 100%;
+                    height: 100%;
+                    right: 0;
+                    z-index: -1;
+
+                    svg {
+                        margin-left: auto;
+                        margin-right: 26px;
+                    }
+                }
+            }
+        }
+
+        .cyan {
+            border: 1px solid var(--cs-cyan);
+
+            .doc {
+                color: var(--cs-cyan);
+            }
+
+            .download {
+                background-color: var(--cs-cyan);
+            }
+        }
+
+        .purple {
+            border: 1px solid var(--cs-purple);
+
+            .doc {
+                color: var(--cs-purple);
+            }
+
+            .download {
+                background-color: var(--cs-purple);
+            }
+        }
+
+        .pink {
+            border: 1px solid var(--cs-pink);
+
+            .doc {
+                color: var(--cs-pink);
+            }
+
+            .download {
+                background-color: var(--cs-pink);
+            }
+        }
+    }
+}

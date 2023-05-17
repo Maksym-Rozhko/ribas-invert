@@ -1003,6 +1003,12 @@
             font-size: 40px;
         }
     }
+    .documents {
+        padding-bottom: 50px;
+        &__container {
+            flex-direction: column;
+        }
+    }
 }
 
 @include mobile {
@@ -1380,6 +1386,15 @@
             img {
                 width: 100%;
             }
+        }
+    }
+    .documents {
+        padding-top: 30px;
+        padding-bottom: 30px;
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 30px;
         }
     }
 }

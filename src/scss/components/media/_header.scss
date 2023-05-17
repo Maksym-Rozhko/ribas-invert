@@ -1,3 +1,11 @@
+@include big-desktop {
+    .header {
+        .nav {
+            margin: inherit;
+        }
+    }
+}
+
 @include small-desktop {
     .header {
         &__container {
