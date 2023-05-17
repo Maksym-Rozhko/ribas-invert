@@ -34,3 +34,13 @@ setTimeout(() => {
         document.querySelector('.preloader').remove();
     }
 }, 5000);
+
+
+const footerYearSpan = document.querySelector('.footer strong span');
+
+if (footerYearSpan) {
+    const date = new Date();
+    const year = date.getFullYear();
+
+    footerYearSpan.textContent = year;
+}
