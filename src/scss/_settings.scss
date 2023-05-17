@@ -101,6 +101,21 @@ a {
   position: relative;
 }
 
+.uForm__error-msg{margin-top:0;margin-bottom:0;color:#fff;font-size: 20px;}
+.uForm__extended{display:none !important}
+.uForm__preload{display:none;position:absolute;z-index:999;left:0;top:0;right:0;width:100%;height:100%;background:url('../uForm/img/loading.gif') center/120px no-repeat #fff;margin:0 auto}
+.uForm__preload {background-size: contain;}
+.message-text {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: var(--cs-yellow);
+    text-align: center;
+
+}
+
 @include mobile {
   .main {
     overflow: hidden;

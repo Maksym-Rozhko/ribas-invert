@@ -1,3 +1,6 @@
+import GraphModal from 'graph-modal';
+const modal = new GraphModal();
+
 const inputNumberElems = document.querySelectorAll('.form .input-number');
 
 const onlyDigitsEnterInput = (inputElems) => {
