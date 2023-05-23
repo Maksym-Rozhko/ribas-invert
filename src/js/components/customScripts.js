@@ -26,17 +26,17 @@ if (footerYearSpans) {
     });
 }
 
-setTimeout(() => {
-    if (document.querySelector('.preloader')) {
-        document.querySelector('.preloader').classList.add('preloader-hide');
-    }
-}, 3000);
+// setTimeout(() => {
+//     if (document.querySelector('.preloader')) {
+//         document.querySelector('.preloader').classList.add('preloader-hide');
+//     }
+// }, 3000);
 
-setTimeout(() => {
-    if (document.querySelector('.preloader')) {
-        document.querySelector('.preloader').remove();
-    }
-}, 5000);
+// setTimeout(() => {
+//     if (document.querySelector('.preloader')) {
+//         document.querySelector('.preloader').remove();
+//     }
+// }, 5000);
 
 
 const footerYearSpan = document.querySelector('.footer strong span');
