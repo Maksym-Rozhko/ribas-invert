@@ -47,6 +47,17 @@
                     }
                 }
             }
+
+            &.step--fifth {
+                &::after {
+                    top: 845px;
+                }
+                .step--one {
+                    &::before {
+                        height: 1200px;
+                    }
+                }
+            }
         }
 
         .step {
@@ -212,6 +223,17 @@
                 .step--one {
                     &::before {
                         height: 1200px;
+                    }
+                }
+            }
+
+            &.step--fifth {
+                &::after {
+                    top: 1225px;
+                }
+                .step--one {
+                    &::before {
+                        height: 1500px;
                     }
                 }
             }
@@ -765,6 +787,16 @@
                     }
                 }
             }
+            &.step--fifth {
+                &::after {
+                    top: 1085px;
+                }
+                .step--one {
+                    &::before {
+                        height: 1400px;
+                    }
+                }
+            }
         }
 
         .step {
@@ -1124,6 +1156,16 @@
             &.step--four {
                 &::after {
                     top: 765px;
+                }
+                .step--one {
+                    &::before {
+                        height: 1200px;
+                    }
+                }
+            }
+            &.step--fifth {
+                &::after {
+                    top: 995px;
                 }
                 .step--one {
                     &::before {

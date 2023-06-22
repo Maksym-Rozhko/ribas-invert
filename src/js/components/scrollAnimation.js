@@ -44,4 +44,5 @@ scrollStepsAnimation('.steps .step--one');
 scrollStepsAnimation('.steps .step--two');
 scrollStepsAnimation('.steps .step--three');
 scrollStepsAnimation('.steps .step--four');
+scrollStepsAnimation('.steps .step--fifth');
 

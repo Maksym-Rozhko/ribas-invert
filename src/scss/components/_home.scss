@@ -434,6 +434,18 @@
             }
         }
 
+        &.step--fifth {
+            &::after {
+                top: 1160px;
+                opacity: 1;
+            }
+            .step--one {
+                &::before {
+                    height: 1600px;
+                }
+            }
+        }
+
         .step {
             @include flex-v-center;
             max-width: 600px;
